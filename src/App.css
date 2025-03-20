@@ -1,0 +1,469 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+.menu-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #00cccc;
+  color: black;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+  z-index: 5;
+}
+.menu-toggle:hover {
+  background-color: #00cccc;
+}
+
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  right: -220px;
+  width: 200px;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgb(14, 206, 14);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  transition: right 0.3s ease-in-out;
+  z-index: 3;
+}
+
+.menu-lateral.aberto {
+  right: 0;
+}
+
+.menu-lateral a {
+  text-decoration: none;
+  color: rgb(14, 206, 14);
+  font-size: 20px;
+  margin-bottom: 15px;
+  display: block;
+}
+
+body {
+  background-color: #000711;
+  font-family: "Courier New", Courier, monospace;
+  scroll-behavior: smooth;
+}
+
+.menu-superior {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  color: rgb(14, 206, 14);
+  z-index: 10;
+}
+
+.title-name {
+  padding-left: 40px;
+  margin-right: auto;
+  color: rgb(14, 206, 14);
+  font-size: 20px;
+}
+
+.combo-links {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 15px;
+}
+
+.combo-links a {
+  text-decoration: none;
+  color: rgb(14, 206, 14);
+  margin-left: 20px;
+  transition: .6s;
+  font-size: 16px;
+}
+.combo-links a:hover{
+  color: rgb(24, 133, 24);
+}
+
+.img-fundo {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.4);
+}
+
+.container-svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+}
+
+.info-pessoais {
+  width: auto;
+  max-width: 90%;
+  height: 150px;
+}
+
+.cargos {
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tecnologias img {
+  width: 150px;
+  height: 80px;
+}
+.tecnologias, .tecnologias2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%; 
+  height: auto; 
+  text-align: center;
+}
+
+.tecnologias2 img {
+  width: 180px;
+  height: 80px;
+}
+.seta{
+  position: absolute;
+  top: calc(80% + 70px);
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+.seta img{
+  width: 100px;
+  height: auto;
+  filter: brightness(0.4);
+  cursor: pointer;
+  
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px; 
+}
+
+.cards-container h3{
+  margin-top: 50px;
+  color: rgb(14, 206, 14);
+  margin-bottom: 50px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.card1{
+  width: 600px; 
+  text-align: center;
+  padding: 20px;
+}
+
+
+.title-tecnologias, .works, .contact{
+  color: green;
+  width: 200px;
+  display: flex;
+  margin-left: 50px;
+  align-items: center;
+  
+  margin-top: 50px;
+  font-family: 'Poppins', sans-serif;
+}
+.title-tecnologias h1, .works h1, .contact h1{
+  background-image: linear-gradient(transparent 0%, transparent 90%, #ffff 90%, green 100%);
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position-x: right;
+  transition: background-size 300ms;
+  font-family: 'Poppins', sans-serif;
+}
+.title-tecnologias h1:hover, .works h1:hover, .contact h1:hover{
+  background-size:  100% 100%;
+  background-position-x: left;
+
+}
+.sobre-mim{
+  width: 80%;
+  margin: auto;
+  border: 1px solid rgb(14, 206, 14);
+}
+.espacamento-sobre{
+  width: 95%;
+  margin: auto;
+}
+.sobre-mim p{
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+}
+.projetos {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 400px;
+  height: 300px;
+  background-color: #000711;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card p {
+  color: #fff;
+}
+
+.card-content img, .card-content video {
+  width: 100%;
+}
+
+.zoom-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.zoom-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: hidden;
+}
+
+.zoomed-media,
+.zoomed-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 18px;
+  z-index: 9;
+}
+
+
+.zoomed-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.close-btn:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.div-inferior-btn{
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.botoes-contato{
+  width: 750px;
+  height: 100%;
+}
+#tag-a{
+  display: flex;
+}
+#tag-a a{
+  text-decoration: none;
+}
+.whatsapp{
+  width: 250px;
+  height: 60px;
+  border: 1px solid #01E676;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  transition: .6s;
+}
+.whatsapp img, .email img, .linkedin img{
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+.whatsapp:hover{
+  background-color: #01E676;
+}
+.email{
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 250px;
+  height: 60px;
+  border: 1px solid #EF5042;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  transition: .6s;
+}
+.email:hover{
+  background-color: #EF5042;
+}
+.linkedin{
+  width: 250px;
+  height: 60px;
+  border: 1px solid #2968B3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  transition: .6s;
+}
+.linkedin:hover{
+  background-color: #2968B3;
+}
+.footer{
+  width: 95%;
+  margin: auto;
+  margin-top: 80px;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  border-top: 1px solid rgb(14, 206, 14);
+}
+.footer a{
+  text-decoration: none;
+  color: rgb(14, 206, 14);
+}
+.copy{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.clipe{
+  margin-left: 5px;
+  width: 12px;
+  height: 12px;
+}
+@media screen and (max-width: 1350px) { 
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cards-container h3{
+    color: rgb(14, 206, 14);
+  }
+  
+  .tecnologias, .tecnologias2 {
+    width: 100%;
+    margin: auto;
+    width: 300px; 
+    text-align: center;
+  }
+  .tecnologias img {
+    width: 120px;
+    height: 80px;
+  }
+  .tecnologias2 img {
+    width: 130px;
+    height: 80px;
+  }
+
+  .row {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  .card1{
+    width: 90%;
+    text-align: center;
+  }
+  .seta{
+    position: absolute;
+    top: calc(90% + 70px);
+    left: 50%;
+    transform: translateX(-50%);
+    
+  }
+  .container-svg {
+    width: 100%;
+  }
+  .container-svg h3{
+    font-size: 10px;
+  }
+  .title-name {
+    font-size: 15px;
+  }
+  .projetos {
+    flex-direction: column;  /* Alinha os cards um abaixo do outro */
+    gap: 10px;               /* Ajuste do espaçamento entre os cards */
+    align-items: center; /* Alinha os cards à esquerda */
+
+  }
+
+  .card {
+    width: 80%;              /* Ajusta o tamanho dos cards para ficar proporcional */
+    max-width: 300px;        /* Largura máxima para os cards */
+    height: auto;            /* Ajusta a altura automaticamente */
+  }
+  #tag-a {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .email{
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
